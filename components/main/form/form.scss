@@ -1,0 +1,96 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #a9accd;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  &__info-box {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: column-reverse;
+  }
+
+  &__input-box {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+    font-size: 2em;
+    line-height: 1.2;
+    padding: 0.2em 0.5em;
+    width: fit-content;
+
+    ::placeholder {
+      font-family: "Roboto", sans-serif;
+    }
+  }
+
+  &__text {
+    height: 2em;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.2em 0.5em;
+    ::placeholder {
+      font-family: "Roboto", sans-serif;
+    }
+  }
+
+  &__date {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+    font-size: 1.5em;
+    line-height: 1.2;
+    padding: 0.2em 0.5em;
+    width: fit-content;
+    margin-bottom: 15px;
+  }
+
+  &__error {
+    color: rgb(207, 30, 10);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+    visibility: hidden;
+
+    &_visible {
+      visibility: visible;
+    }
+  }
+
+  &__button {
+    font-family: "Roboto", sans-serif;
+    margin-top: 20px;
+    width: fit-content;
+    border: none;
+    font-size: 1.8em;
+    line-height: 1.2;
+    font-weight: 300;
+    background-color: seagreen;
+    color: white;
+    padding: 0.4em 0.8em;
+    border-radius: 0.5em;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

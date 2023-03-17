@@ -1,0 +1,97 @@
+.comment {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  position: relative;
+  &__info-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-right: 10px;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: slategrey;
+    &::before {
+      content: "-";
+      margin-right: 5px;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  &__like {
+    background-image: url(../../../images/like.svg);
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+
+    &_on {
+      filter: drop-shadow(0px 0px 3px red);
+    }
+
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(2px 2px 1px salmon);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__delete {
+    background-image: url(../../../images/delete.svg);
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(2px 2px 1px salmon);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .comment {
+    &__like,
+    &__delete {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

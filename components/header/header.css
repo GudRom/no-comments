@@ -1,0 +1,16 @@
+.header {
+  background-color: #a9accd;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  background: linear-gradient(0deg, goldenrod, #141414);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 2px 3px slategrey);
+}/*# sourceMappingURL=header.css.map */

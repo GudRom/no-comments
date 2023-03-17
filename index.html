@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Без комментариев - сайт для комментариев</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Без комментариев</h1>
+    </header>
+    <main class="main">
+      <p class="main__text">
+        Напишите, что вы думаете.<br />
+        А мы подумаем, что с этим делать.
+      </p>
+      <form class="form" name="comment">
+        <div class="form__info-box">
+          <div class="form__input-box">
+            <input
+              class="form__name"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите имя"
+              maxlength="20"
+            />
+            <span class="form__error form__error-name">Только русский язык. Минимум 2 буквы.</span>
+          </div>
+          <input class="form__date" type="date" name="date" id="date" />
+        </div>
+        <div class="form__input-box">
+          <input
+            class="form__text"
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Ваш комментарий"
+          ></input>
+          <span class="form__error form__error-comment">Только русский язык. Минимум 2 буквы.</span>
+        </div>
+        <button class="form__button" type="submit">Отправить</button>
+      </form>
+      <ul class="main__list"></ul>
+    </main>
+    <template class="template">
+      <li class="main__list-item">
+        <div class="comment">
+          <div class="comment__info-box">
+            <p class="comment__name"></p>
+            <p class="comment__date"></p>
+          </div>
+          <p class="comment__text"></p>
+          <button class="comment__like"></button>
+          <button class="comment__delete"></button>
+        </div>
+      </li>
+    </template>
+    <script src="./index.js"></script>
+  </body>
+</html>
